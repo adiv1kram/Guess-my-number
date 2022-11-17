@@ -1,4 +1,8 @@
 'use strict';
-console.log(document.querySelector('.message').textContent);
-document.querySelector('.number').textContent=13;
-document.querySelector('.score').textContent=0113;
+
+
+
+
+document.querySelector('.check').addEventListener('click',function(){
+    console.log(document.querySelector('.guess').value);
+});
