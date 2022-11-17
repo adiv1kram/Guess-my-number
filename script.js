@@ -17,14 +17,23 @@ document.querySelector('.check').addEventListener('click',function(){
         document.querySelector('.score').textContent=score;
     }
     else if(guess<SecretNumber){
-        document.querySelector('.message').textContent="Number is too low!";
+        if(score>0){document.querySelector('.message').textContent="Number is too low!";
         score--;
-        document.querySelector('.score').textContent=score;
+        document.querySelector('.score').textContent=score;}
+        else{
+            document.querySelector(".message").textContent="You lost the game";
+        }
+        
     }
     else if(guess>SecretNumber){
-        document.querySelector('.message').textContent="Number is too high!";
-        score--;
-        document.querySelector('.score').textContent=score;
+        if(score>0){
+            document.querySelector('.message').textContent="Number is too high!";
+            score--;
+            document.querySelector('.score').textContent=score;
+        }
+        else{
+            document.querySelector(".message").textContent="You lost the game";
+        }
     }
     
 });
