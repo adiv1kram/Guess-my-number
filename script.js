@@ -41,13 +41,13 @@ document.querySelector('.check').addEventListener('click',function(){
 });
 document.querySelector9('.again').addEventListener('click',function(){
     score=20;
-    SecretNumber=Math.trunc(Math.random()*20)+1; 
-    document.querySelector('body').style.backgroundcolor='#222';
-    document.querySelevtor('.message').textContent='start guesssing...';
+    SecretNumber=Math.trunc(Math.random()*20)+1;
+    document.querySelector('.message').textContent='start guesssing...';
     document.querySelector('.score').textContent=score;
-    document.querySelevtor('.number').textContent='?';
-    document.querySelevtor('.guess').value='';
-    document.querySelevtor('.number').style.width='30rem';
-    
-}
-)
+    document.querySelector('.number').textContent='?';
+    document.querySelector('.guess').value='';
+    document.querySelector('body').style.backgroundcolor='#222';
+
+    document.querySelector('.number').style.width='15rem';
+
+});
