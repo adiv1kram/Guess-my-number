@@ -1,6 +1,7 @@
 'use strict';
 let SecretNumber=Math.trunc(Math.random()*20)+1;
 let score=20;
+let highscore=0;
 document.querySelector('.check').addEventListener('click',function(){
     console.log(document.querySelector('.guess').value);
     //document.querySelector('.message').textContent="congratulations! Correct Answer"
@@ -13,10 +14,14 @@ document.querySelector('.check').addEventListener('click',function(){
     else if(guess===SecretNumber){
         document.querySelector('.message').textContent="congratulations! Correct Answer";  
         document.querySelector('.number').textContent=SecretNumber;
-        score+=10;
+        
         document.querySelector('.score').textContent=score;
         document.querySelector('body').style.backgroundColor='#60b347';
         document.querySelector('.highscore')  .textContent=score;
+        if(score>highscore){
+            highscore=score;
+            document.querySelector('.highscore').textContent=highscore;
+        }
     }
     else if(guess<SecretNumber){
         if(score>0){document.querySelector('.message').textContent="Number is too low!";
@@ -42,7 +47,8 @@ document.querySelector('.check').addEventListener('click',function(){
 document.querySelector9('.again').addEventListener('click',function(){
     score=20;
     SecretNumber=Math.trunc(Math.random()*20)+1;
-    document.querySelector('.message').textContent='start guesssing...';
+    //document.querySelector('.message').textContent='start guesssing...';
+    displayMessage('start guesssing...')
     document.querySelector('.score').textContent=score;
     document.querySelector('.number').textContent='?';
     document.querySelector('.guess').value='';
