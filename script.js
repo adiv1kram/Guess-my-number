@@ -15,6 +15,7 @@ document.querySelector('.check').addEventListener('click',function(){
         document.querySelector('.number').textContent=SecretNumber;
         score+=10;
         document.querySelector('.score').textContent=score;
+        document.querySelector('body').style.backgroundColor='#60b347';
     }
     else if(guess<SecretNumber){
         if(score>0){document.querySelector('.message').textContent="Number is too low!";
@@ -37,4 +38,9 @@ document.querySelector('.check').addEventListener('click',function(){
     }
     
 });
-
+document.querySelector9('.again').addEventListener('click',function(){
+     document.querySelector('body').style.backgroundColor='#222';
+     document.querySelevtor('.message').textContent='start guesssing...';
+     document.querySelector('.score').textContent=score;
+}
+)
